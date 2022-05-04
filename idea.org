@@ -1,0 +1,38 @@
+* user
+  slots: id username hashed-password permissions
+** TODO
+   permisions
+   permisions: edit penmisions , ban/unban user
+
+* tags
+  permisions: create/delete/edit tag/alias
+** TODO
+   add id
+** Examples
+   author:ken character:ken item:ken
+
+* post
+  slots: id user-id upload-time tags content-type
+  add slots?: source-url artist
+
+* Page
+** Post
+*** TODO
+**** Slideshow
+     Slideshow viev /post/slideshow/\\d+
+**** Edit mode
+     Flag for deletion / Delete / Purge
+     Add to favorites
+     Views count
+     Rating
+     Listed/unlisted
+     Set avatar
+     Post history
+
+** Posts
+*** TODO
+    Better search
+    ContactUs
+    About
+    Help
+    TOS
