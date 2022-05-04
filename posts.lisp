@@ -142,7 +142,7 @@
          (:li "ID:" id)
          (:li "Posted:" (post-date post))
          (:li "by:" (user-username (store-object-with-id (post-user-id post))))
-         (:li "Resulution: " (media-resolution media))
+         (:li "Resolution: " (media-resolution media))
          (:li "File size:" (media-size media)))
         (:h5 "Options")
         (:ul
