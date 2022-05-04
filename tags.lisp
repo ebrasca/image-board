@@ -141,7 +141,8 @@
                              (string-trim '(#\Space)
                                           string)))
              :for tag := (or (tag-with-name name)
-                             (car (tag-with-alias name)))
+                             (car (tag-with-alias name))
+                             (make-tag name))
              :when tag
                :collect tag))))
 
