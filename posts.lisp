@@ -148,10 +148,10 @@
         (:ul
          (:li
           (:a :href (media-url media)
-              "View larger version"))
+              "View Full Size"))
          (:li
           (:a :href (media-url media) :download t
-              "Download larger version"))
+              "Download Full Size"))
          (:li
           (:a :href (delete-url id)
               "Delete")))
