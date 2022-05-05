@@ -131,18 +131,18 @@
       (eq from to)
       (tags-circularp from to)))
 
-(defun parse-tags (string)
+(defun parse-tags (string &optional (make-tag nil))
   (if (string= "" string)
       nil
       (remove-duplicates
        (loop :for name :in (split-sequence:split-sequence
                             #\Space
                             (string-upcase
-                             (string-trim '(#\Space)
-                                          string)))
+                             (string-trim '(#\Space) string)))
              :for tag := (or (tag-with-name name)
                              (car (tag-with-alias name))
-                             (make-tag name))
+                             (when make-tag
+                               (make-tag name)))
              :when tag
                :collect tag))))
 
