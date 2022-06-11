@@ -23,6 +23,11 @@
      :border "3px solid #0000ff")
    '(.flex
      :display "flex"
-     :flex-flow "row wrap"
-     :width "100%"
-     :height "100%")))
+     :flex-wrap "wrap")
+   '(.thumbnail-preview
+     :display "flex"
+     :width "200px"
+     :height "200px"
+     :margin-top "20px"
+     :align-items "center"
+     :justify-content "center")))

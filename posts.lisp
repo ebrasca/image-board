@@ -207,10 +207,11 @@
              :for post :in (store-objects-with-class 'post)
              :for post-id := (store-object-id post)
              :when (subsetp tags (post-tags post) :test #'eq)
-               :do (:a :href (if (session-value :view-mode)
-                                 (media-url (post-content post))
-                                 (post-url post-id))
-                       (render-preview (post-content-preview post))))))))
+               :do (:article :class "thumbnail-preview"
+                             (:a :href (if (session-value :view-mode)
+                                           (media-url (post-content post))
+                                           (post-url post-id))
+                                 (render-preview (post-content-preview post)))))))))
 
 (hunchentoot:define-easy-handler (upload :uri "/upload") (file tags)
   (unless (session-value :user-id)
